@@ -22,11 +22,21 @@ const students = [
 function AttendanceBook(props) {
   return (
     <ul>
+      // id 를 키값으로 사용
       {students.map(student => {
         return <li key={student.id}>{student.name}</li>;
       })}
     </ul>
   );
 }
+
+// // 포맷팅 된 문자열을 키값으로 사용
+// {students.map((student, index) => {
+//   return <li key={`student-id-${students.id}`}>{student.name}</li>;
+// })}
+// // 배열의 인덱스를 키값으로 사용
+// {students.map((student, index) => {
+//   return <li key={index}>{student.name}</li>;
+// })}
 
 export default AttendanceBook;
